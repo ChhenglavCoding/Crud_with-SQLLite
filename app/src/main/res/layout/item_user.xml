@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/userbar"
+    android:elevation="8dp"
+    android:padding="10dp"
+    android:layout_marginBottom="10dp"
+    android:paddingHorizontal="10dp"
+    android:paddingVertical="8dp">
+
+
+    <ImageView
+        android:id="@+id/tvUserProfile"
+        android:layout_width="66dp"
+        android:layout_height="74dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vecteezy" />
+
+    <!-- Full Name and Email -->
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/username"
+        android:textColor="#4D4D4D"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvUserProfile"
+        app:layout_constraintTop_toTopOf="@+id/tvUserProfile" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/gender"
+        android:textColor="#818080"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:text="Email"
+        android:textColor="#818080"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEdit"
+        app:layout_constraintEnd_toStartOf="@+id/btnEdit"
+        app:layout_constraintTop_toTopOf="@+id/btnEdit"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/trash" />
+
+    <ImageView
+        android:id="@+id/btnEdit"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvUserProfile"
+        app:srcCompat="@drawable/pen" />
+
+    <!--      -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
